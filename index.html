@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Mi portfolio personal - Antonella Del vecchio</title>
+</head>
+<body>
+    <header class="shadow">
+        <div class="picture">
+            <img src="img/me.png" alt="profile picture">
+        </div>
+        <section class="datos">
+            <img src="img/hello.png" alt="">
+            <h1>Welcome! I'm Antonella</h1>
+            <h4>I get my degree in tourism business management
+                and also I'm a web developer in progress.
+            </h4>
+            <article>
+                <ul>
+                    <li><i class="far fa-user-circle"></i> I'm 27 years old</li>
+                    <li><i class="fas fa-map-marker-alt"></i> I live in Mendoza, Argentina</li>
+                </ul>
+            </article>
+        </section>
+      <!--------------------finaliza sección datos--------------------------->
+        <section class="nav-bar">
+            <input class="menu-btn" type="checkbox" id="menu-btn">
+            <label class="menu-icon" for="menu-btn">
+                <span class="nav-icon"></span>
+            </label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#cursos">Education</a></li>
+                    <li><a href="#trabajos">Projects</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+            </nav>
+        </section>
+       <!--------------------finaliza barra de navegación----------------------> 
+    </header>
+       <!--------------------finaliza header--------------------------->
+    <main> 
+        <div class="image">
+            <img src="img/web-development.gif" alt="developer">
+        </div>
+        <section class="about-me shadow" id="about">
+            <h2 class="tittle">About me</h2>
+            <article class="text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed velit eos dolores voluptate quasi magnam tempora doloremque, ducimus porro, molestias dignissimos delectus officia inventore corporis quod similique quas quibusdam! Tempore!
+                    Alias illum doloremque quod modi esse eligendi, delectus dignissimos soluta reprehenderit ratione sunt minus quae at tempora aperiam ut facilis qui itaque similique, et corporis ea iusto! Iure, rerum perspiciatis?
+                </p>
+            </article>
+            <div class="skills">
+                <h3>Skills</h3>
+                <div class="barras w-auto">
+                    <h6>English</h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                    </div>
+                    <h6>Interpersonal skills</h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                    </div>
+                    <h6>HTML5 / CSS3</h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                    </div>
+                    <h6>SASS</h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%</div>
+                    </div>
+                    <h6>Web Responsive Desing </h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
+                    </div>
+                    <h6>Version control / GIT</h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 18%;" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100">18%</div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+     <!--------------------finaliza sección about me--------------------------->
+        
+        <section class="education shadow" id="cursos">
+            <h2 class="tittle">Education</h2>
+            <article class="estudies">
+                <div class="acamica">
+                    <h3>Desarrollo Web Front-End</h3>
+                    <h5>Acámica</h5>
+                    <span>En curso</span>
+                </div>
+                <div class="nextu">
+                    <h3>Desarrollo Web</h3>
+                    <h5>NextU</h5>
+                    <span>2018</span>
+                </div>
+                <div class="universidad">
+                    <h3>Tec. sup. gestión de emp. turísticas</h3>
+                    <h5>UTN - Universidad Tecnológica Nacional</h5>
+                    <span>2017-2019</span>
+                </div>
+            </article>
+        </section>
+     <!--------------------finaliza sección education--------------------------->
+        <section class="shadow" id="trabajos">
+            <h2 class="tittle">My projects</h2>
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="6"></li>
+                </ol>
+                <div class="carousel-inner shadow" data-interval="4000">
+                    <div class="carousel-item active">
+                        <img src="img/fotografia1.png" class="d-block w-100" alt="photo">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Photography blog</h5>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="4000">
+                      <img src="img/musica1.png" class="d-block w-100" alt="photo">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>Music blog</h5>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="4000">
+                      <img src="img/viajes1.png" class="d-block w-100" alt="photo">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>Travel blog</h5>
+                          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="4000">
+                        <img src="img/cine1.png" class="d-block w-100" alt="photo">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Cinema listings</h5>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="4000">
+                        <img src="img/cocina.png" class="d-block w-100" alt="photo">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Cooking blog</h5>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="4000">
+                        <img src="img/tienda.png" class="d-block w-100" alt="photo">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>E-store</h5>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="4000">
+                        <img src="img/redsocial.png" class="d-block w-100" alt="photo">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Social network</h5>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+     <!--------------------finaliza sección projects--------------------------->
+    </main>
+    <!--------------------fin main--------------------------->
+    <footer>
+        <section class="contact-me shadow" id="contact">
+            <h2 class="tittle">Contact me</h2>
+            <form>
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="juanp@gmail.com" required>
+                </div>
+                <div>
+                    <label for="enviar"></label>
+                    <input type="submit" name="enviar" id="enviar" class="btn-send">
+                </div>
+            </form>
+        </section>
+        <!--------------------fin contact--------------------------->
+        <div>
+            <span>© 2020— Mi portfolio personal</span>
+        </div>
+        <div class="networks">
+            <a href="mailto:antodelvecchio9@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/AntoDelVecchio" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="www.linkedin.com/in/antonella-del-vecchio-2b8776140" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+    <!--------------------end--------------------------->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

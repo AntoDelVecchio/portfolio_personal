@@ -1,0 +1,41 @@
+%menu-hamburguesa {
+    background: $font-color;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all .5s ease-out;
+}
+
+%tittle {
+    font-family: $secondary-font;
+    background-color: #ffffff;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 2rem 2rem;
+    color: $font-color;
+}
+
+$breakpoint-xlg: 1500px;
+$breakpoint-lg: 1120px;
+$breakpoint-md: 760px;
+$breakpoint-sm: 600px;
+
+@mixin respond-to($medias...) {
+    @each $media in $medias {
+        @if $media == desktop-screen {
+            @media screen and (min-width: $breakpoint-xlg) { @content; }
+        }
+        @else if $media == laptop-screen{
+            @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xlg) { @content; }
+        }
+        @else if $media == tablet-screen {
+            @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) { @content; }
+        }
+        @else if $media == mobile-screen {
+            @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) { @content; }
+        }
+    }
+}

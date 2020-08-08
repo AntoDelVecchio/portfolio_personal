@@ -1,0 +1,874 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@400;500;600&display=swap");
+body header .nav-bar .menu-icon .nav-icon:before, body header .nav-bar .menu-icon .nav-icon:after {
+  background: #060A24;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+h2 {
+  font-family: "Bebas Neue", cursive;
+  background-color: #ffffff;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem 2rem 2rem;
+  color: #060A24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body {
+    padding-right: 15rem;
+    padding-left: 15rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body {
+    padding-right: 25rem;
+    padding-left: 25rem;
+  }
+}
+
+body header {
+  width: 100%;
+  background-image: url(img/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* fin sección datos */
+  /* fin barra de navegación */
+}
+
+body header .picture {
+  display: none;
+  width: 40%;
+  overflow: hidden;
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body header .picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translate(0, 12rem);
+            transform: translate(0, 12rem);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body header .picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translate(0, 12rem);
+            transform: translate(0, 12rem);
+  }
+}
+
+body header .picture img {
+  width: 10rem;
+}
+
+body header .picture img:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+  -webkit-filter: opacity(0.9);
+          filter: opacity(0.9);
+}
+
+body header .datos {
+  padding: 2rem;
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body header .datos {
+    float: right;
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body header .datos {
+    float: right;
+    width: 60%;
+  }
+}
+
+body header .datos img {
+  width: 7rem;
+  position: absolute;
+  margin-left: 10rem;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  margin-top: -2rem;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body header .datos img {
+    display: none;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body header .datos img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body header .datos img {
+    display: none;
+  }
+}
+
+body header .datos h1 {
+  font-family: "Bebas Neue", cursive;
+  color: #060A24;
+  font-size: 3rem;
+  width: 40%;
+  padding-top: 3rem;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body header .datos h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+body header .datos h4 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1rem;
+  color: #060A24;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body header .datos h4 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
+body header .datos ul {
+  list-style: none;
+  line-height: 2.5rem;
+  color: #060A24;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body header .datos ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: [y0] 1fr [y1] 1fr [y2];
+        grid-template-rows: [y0] 1fr [y1] 1fr [y2];
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body header .nav-bar {
+  width: 100%;
+}
+
+body header .nav-bar .menu-btn {
+  display: none;
+}
+
+body header .nav-bar .menu-btn:checked ~ .menu ul {
+  max-height: 15rem;
+  padding-bottom: 0.5rem;
+}
+
+body header .nav-bar .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+body header .nav-bar .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
+}
+
+body header .nav-bar .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+}
+
+body header .nav-bar .menu-icon {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body header .nav-bar .menu-icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body header .nav-bar .menu-icon {
+    display: none;
+  }
+}
+
+body header .nav-bar .menu-icon .nav-icon {
+  background: #060A24;
+  display: block;
+  height: 2px;
+  width: 1.2rem;
+  position: relative;
+  -webkit-transition: background .5s ease-out;
+  transition: background .5s ease-out;
+}
+
+body header .nav-bar .menu-icon .nav-icon:before {
+  top: 5px;
+}
+
+body header .nav-bar .menu-icon .nav-icon:after {
+  top: -5px;
+}
+
+body header .nav-bar .menu {
+  clear: both;
+  overflow: hidden;
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body header .nav-bar .menu {
+    margin: 0.5rem 0;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body header .nav-bar .menu {
+    margin: 0.5rem 0;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body header .nav-bar .menu {
+    font-size: 2rem;
+  }
+}
+
+body header .nav-bar .menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: linear-gradient(225deg, #f0cc4a 0%, #f3c623 100%);
+  max-height: 0;
+  -webkit-transition: max-height .5s ease-out;
+  transition: max-height .5s ease-out;
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body header .nav-bar .menu ul {
+    clear: none;
+    max-height: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body header .nav-bar .menu ul {
+    clear: none;
+    max-height: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body header .nav-bar .menu ul li {
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body header .nav-bar .menu ul li:hover {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    -webkit-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body header .nav-bar .menu ul li:hover {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    -webkit-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+  }
+}
+
+body header .nav-bar .menu ul li a {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.2rem;
+  padding: 0 0.5rem 0 0.5rem;
+  color: #060A24;
+  text-decoration: none;
+}
+
+body header .nav-bar .menu ul li a:hover, body header .nav-bar .menu ul li a:active {
+  color: #f7f5e9;
+  text-decoration: line-through;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* fin about me */
+  /* fin estudios */
+  /* fin proyectos */
+}
+
+body main .image {
+  width: 80%;
+  margin: 3rem 0;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body main .image {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body main .image {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body main .image {
+    width: 50%;
+  }
+}
+
+body main .image img {
+  width: 100%;
+}
+
+body main .about-me {
+  width: 100%;
+  background: linear-gradient(225deg, #f7f5e9 0%, #faeee7 100%);
+}
+
+body main .about-me .text {
+  padding: 1rem;
+  color: #060A24;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body main .about-me .text {
+    float: left;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body main .about-me .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body main .about-me .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body main .about-me .text p {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body main .about-me .text p {
+    width: 85%;
+  }
+}
+
+body main .about-me .skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [x0] 10% [x1] 90% [x3];
+      grid-template-columns: [x0] 10% [x1] 90% [x3];
+  -ms-grid-rows: [y0] 1fr [y1];
+      grid-template-rows: [y0] 1fr [y1];
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body main .about-me .skills {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body main .about-me .skills {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body main .about-me .skills {
+    padding: 1rem 0 1rem;
+  }
+}
+
+body main .about-me .skills h3 {
+  padding: 2rem 0 1rem;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  color: #060A24;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  grid-row: y0;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body main .about-me .skills h3 {
+    padding: 0 6rem 0 6rem;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body main .about-me .skills h3 {
+    padding: 0 6rem 0 6rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body main .about-me .skills h3 {
+    padding: 0 7rem 0 7rem;
+  }
+}
+
+body main .about-me .skills .barras {
+  grid-column: x1;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body main .about-me .skills .barras {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: [x0] 30% [x1] 40% [x2];
+        grid-template-columns: [x0] 30% [x1] 40% [x2];
+    -ms-grid-rows: [y0] 1fr [y1];
+        grid-template-rows: [y0] 1fr [y1];
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body main .about-me .skills .barras {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: [x0] 30% [x1] 40% [x2];
+        grid-template-columns: [x0] 30% [x1] 40% [x2];
+    -ms-grid-rows: [y0] 1fr [y1];
+        grid-template-rows: [y0] 1fr [y1];
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body main .about-me .skills .barras {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: [x0] 30% [x1] 40% [x2];
+        grid-template-columns: [x0] 30% [x1] 40% [x2];
+    -ms-grid-rows: [y0] 1fr [y1];
+        grid-template-rows: [y0] 1fr [y1];
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body main .about-me .skills .barras h6 {
+  font-size: 1rem;
+  padding-left: 1rem;
+  color: #060A24;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body main .about-me .skills .barras h6 {
+    padding: 1rem 0 1rem 1rem;
+    grid-column: x0;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body main .about-me .skills .barras h6 {
+    padding: 1rem 0 1rem 1rem;
+    grid-column: x0;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body main .about-me .skills .barras h6 {
+    padding: 1rem 0 1rem 1rem;
+    grid-column: x0;
+  }
+}
+
+body main .about-me .skills .barras .progress {
+  margin: 1rem;
+  background-color: gainsboro;
+  width: inherit;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body main .about-me .skills .barras .progress {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body main .about-me .skills .barras .progress {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body main .about-me .skills .barras .progress {
+    width: 60%;
+  }
+}
+
+body main .estudios {
+  padding: 0 2rem 2rem;
+}
+
+body main .education {
+  width: 100%;
+  background: linear-gradient(225deg, #f7f5e9 0%, #faeee7 100%);
+  margin-top: 10rem;
+}
+
+body main .education .estudies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body main .education .estudies {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body main .education .estudies {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body main .education .estudies {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+}
+
+body main .education .estudies div {
+  padding: 2.5rem;
+  background: linear-gradient(225deg, #f0cc4a 0%, #f3c623 100%);
+  width: 15rem;
+  height: 15rem;
+  border-radius: 10rem;
+}
+
+body main .education .estudies div:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body main .education .estudies div {
+    width: 70%;
+  }
+}
+
+body main .education .estudies div h3, body main .education .estudies div h5, body main .education .estudies div span {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #060A24;
+  width: 115%;
+}
+
+body main .education .estudies div h5 {
+  font-family: "Bebas Neue", cursive;
+}
+
+body main #trabajos {
+  margin-top: 10rem;
+}
+
+body footer {
+  /* fin seccion contacto */
+}
+
+body footer .contact-me {
+  width: 100%;
+  background: linear-gradient(225deg, #f7f5e9 0%, #faeee7 100%);
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+}
+
+body footer .contact-me form {
+  padding: 1rem 1rem 1rem;
+  text-align: center;
+}
+
+body footer .contact-me form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+body footer .contact-me form div label, body footer .contact-me form div input {
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: "Bebas Neue", cursive;
+  padding-top: 0.2rem;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body footer .contact-me form div label, body footer .contact-me form div input {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body footer .contact-me form div label, body footer .contact-me form div input {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body footer .contact-me form div label, body footer .contact-me form div input {
+    width: 50%;
+  }
+}
+
+body footer .contact-me form div .btn-send {
+  background: linear-gradient(225deg, #f0cc4a 0%, #f3c623 100%);
+  width: 70%;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body footer .contact-me form div .btn-send {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body footer .contact-me form div .btn-send {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body footer .contact-me form div .btn-send {
+    width: 25%;
+  }
+}
+
+body footer div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer div span {
+  font-size: 1rem;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 1rem;
+}
+
+body footer .networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  padding: 1.5rem 0 1rem 0;
+}
+
+@media (min-width: 760px) and (max-width: 1120px) {
+  body footer .networks {
+    padding: 2rem 14rem 2rem 14rem;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1500px) {
+  body footer .networks {
+    padding: 2rem 14rem 2rem 14rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body footer .networks {
+    padding: 2rem 14rem 2rem 14rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body footer .networks {
+    padding: 2rem 22rem 2rem 22rem;
+  }
+}
+
+body footer .networks i {
+  color: #060A24;
+}
+
+body footer .networks i:hover {
+  color: linear-gradient(225deg, #f0cc4a 0%, #f3c623 100%);
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@400;500;600&display=swap');
+@import 'variables';
+@import 'utilities';
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    @extend %tittle;
+}
+
+body{
+    font-family: $principal-font;
+    display: flex;
+    flex-flow: column nowrap;
+    @include respond-to(tablet-screen) {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @include respond-to(laptop-screen) {
+        padding-right: 15rem;
+        padding-left: 15rem;
+    }
+    @include respond-to(desktop-screen) {
+        padding-right: 25rem;
+        padding-left: 25rem;
+    }
+    header{
+        width: 100%;
+        background-image: url(img/header.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        .picture{
+            display: none;
+            width: 40%;
+            overflow: hidden;
+            @include respond-to(laptop-screen, desktop-screen) {
+                display: flex;
+                justify-content: center;
+                transform: translate(0, 12rem);
+            }
+            img{
+                width: 10rem;
+                &:hover{
+                    transform:scale(0.9);
+                    transition: all .4s ease-out;
+                    filter: opacity(.9);
+                }
+            }
+            
+        }
+        .datos{
+            padding: 2rem;
+            @include respond-to(laptop-screen, desktop-screen) {
+                float: right;
+                width: 60%;
+            }
+            img{
+                width: 7rem;
+                position: absolute;
+                margin-left: 10rem;
+                transform: rotate(10deg);
+                margin-top: -2rem;
+                @include respond-to(tablet-screen, laptop-screen, desktop-screen){
+                    display: none;
+                }
+            }
+            h1{
+                font-family: $secondary-font;
+                color: $font-color;
+                font-size: 3rem;
+                width: 40%;
+                padding-top: 3rem;
+                @include respond-to(tablet-screen){
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            h4{
+                font-family: $secondary-font;
+                font-size: 1rem;
+                color: $font-color;
+                @include respond-to(tablet-screen) {
+                    text-align: center;
+                    font-size: 1.2rem;
+                }
+            }
+            ul{
+                list-style: none;
+                line-height: 2.5rem;
+                color: $font-color;
+                @include respond-to(tablet-screen) {
+                    display: grid;
+                    grid-template-rows: [y0] 1fr [y1] 1fr [y2];
+                    width: 100%;
+                    justify-content: center;
+                }
+                
+            }
+        }              /* fin sección datos */
+
+        .nav-bar{
+            width: 100%;
+            .menu-btn{
+                display: none;
+                &:checked ~ .menu ul{
+                    max-height: 15rem;
+                    padding-bottom: 0.5rem;
+                }
+                &:checked ~ .menu-icon .nav-icon{
+                    background: transparent;
+                }
+                &:checked ~ .menu-icon .nav-icon:before{
+                    transform: rotate(-45deg);
+                    top: 0;
+                }
+                &:checked ~ .menu-icon .nav-icon:after{
+                    transform: rotate(45deg);
+                    top: 0;
+                }
+            }
+            .menu-icon{
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+                @include respond-to(laptop-screen, desktop-screen){
+                    display: none;
+                }
+                .nav-icon{
+                    background: $font-color;
+                    display: block;
+                    height: 2px;
+                    width: 1.2rem;
+                    position: relative;
+                    transition: background .5s ease-out;
+                    &:before{
+                        @extend %menu-hamburguesa;
+                        top: 5px;
+                    }
+                    &:after{
+                        @extend %menu-hamburguesa;
+                        top: -5px;
+                    } 
+                }
+            }
+            .menu{
+                clear: both;
+                overflow: hidden;
+                @include respond-to(laptop-screen, desktop-screen) {
+                    margin: 0.5rem 0;
+                }
+                @include respond-to(tablet-screen) {
+                    font-size: 2rem;
+                }
+                 ul{
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    overflow: hidden;
+                    background-color: $primary-color;
+                    max-height: 0;
+                    transition: max-height .5s ease-out;
+                    @include respond-to(laptop-screen, desktop-screen) {
+                        clear: none;
+                        max-height: none;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    li{
+                        text-align: center;
+                        padding-top: 0.5rem;
+                        padding-right: 1.5rem;
+                        @include respond-to(laptop-screen, desktop-screen) {
+                            &:hover{
+                                transform:scale(1.3);
+                                transition: all .4s ease-out;
+                            }
+                        }
+                        a{
+                            font-family: $secondary-font;
+                            font-size: 1.2rem;
+                            padding: 0 0.5rem 0 0.5rem;
+                            color: $font-color;
+                            text-decoration: none;
+                            &:hover, &:active{
+                                color: $secondary-font-color;
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+                }
+            }
+        }               /* fin barra de navegación */
+    }
+    
+    main{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        .image{
+            width: 80%;
+            margin: 3rem 0;
+            @include respond-to(tablet-screen) {
+                width: 60%;
+            }
+            @include respond-to(laptop-screen, desktop-screen) {
+                width: 50%;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .about-me{
+            width: 100%;
+            background: $secondary-color;
+            .text{
+                padding: 1rem;
+                color: $font-color;
+                @include respond-to(tablet-screen) {
+                    float: left;
+                    width: 100%;
+                }
+                @include respond-to(laptop-screen, desktop-screen) {
+                    display: flex;
+                    justify-content: center;
+                }
+                p{
+                    @include respond-to(laptop-screen, desktop-screen) {
+                        width: 85%;
+                    }
+                }
+            }
+            .skills{
+                display: grid;
+                grid-template-columns: [x0] 10% [x1] 90% [x3];
+                grid-template-rows: [y0] 1fr [y1] ;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                @include respond-to(tablet-screen, laptop-screen, desktop-screen) {
+                    padding: 1rem 0 1rem;
+                }
+                h3{
+                    padding: 2rem 0 1rem;
+                    font-family: $secondary-font;
+                    font-size: 2rem;
+                    color: $font-color;
+                    transform: rotate(-90deg);
+                    grid-row: y0;
+                    @include respond-to(tablet-screen, laptop-screen){
+                        padding: 0 6rem 0 6rem;
+                        
+                    }
+                    @include respond-to(desktop-screen) {
+                        padding: 0 7rem 0 7rem;
+                    }
+                }
+                .barras{
+                    grid-column: x1;
+                    @include respond-to(tablet-screen, laptop-screen, desktop-screen) {
+                        display: grid;
+                        grid-template-columns: [x0] 30% [x1] 40% [x2];
+                        grid-template-rows: [y0] 1fr [y1];
+                        justify-content: center;
+                    }
+                    h6{
+                        font-size: 1rem;
+                        padding-left: 1rem;
+                        color: $font-color;
+                        @include respond-to(tablet-screen, laptop-screen, desktop-screen) {
+                            padding: 1rem 0 1rem 1rem;
+                            grid-column: x0;
+                        }
+                    }
+                    .progress{
+                        margin: 1rem;
+                        background-color: gainsboro;
+                        width: inherit;
+                        @include respond-to(tablet-screen, laptop-screen, desktop-screen) {
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+            
+        }                 /* fin about me */
+
+        .estudios{
+            padding: 0 2rem 2rem;
+        }
+
+        .education{
+            width: 100%;
+            background: $secondary-color;
+            margin-top: 10rem;
+            .estudies{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                padding: 2rem;
+                @include respond-to(tablet-screen, laptop-screen, desktop-screen) {
+                    display: flex;
+                    flex-flow: row nowrap;
+                }
+                div{
+                    padding: 2.5rem;
+                    background: $primary-color;
+                    width: 15rem;
+                    height: 15rem;
+                    border-radius: 10rem;
+                    &:hover{
+                        transform:scale(1.1);
+                    }
+                    @include respond-to(tablet-screen) {
+                        width: 70%;
+                    }
+                    h3, h5, span {
+                        line-height: 1.5rem;
+                        margin-bottom: 1rem;
+                        font-size: 1.2rem;
+                        color: $font-color;
+                        width: 115%;
+                    }
+                    h5{
+                        font-family: $secondary-font;
+                    }
+                }
+            }
+        }                    /* fin estudios */
+
+        #trabajos{
+            margin-top: 10rem;  
+        }                    /* fin proyectos */
+    }
+
+    footer{
+        .contact-me{
+            width: 100%;
+            background: $secondary-color;
+            margin-top: 10rem;
+            margin-bottom: 3rem;
+            form{
+                padding: 1rem 1rem 1rem;
+                text-align: center;
+                div{
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    label, input{
+                        width: 100%;
+                        font-size: 1.2rem;
+                        font-family: $secondary-font;
+                        padding-top: 0.2rem;
+                        @include respond-to(tablet-screen) {
+                            width: 70%;
+                        }
+                        @include respond-to (laptop-screen, desktop-screen) {
+                            width: 50%;
+                        }
+                    }
+                    .btn-send{
+                        background: $primary-color;
+                        width: 70%;
+                        padding: 0.5rem;
+                        margin: 1rem;
+                        &:hover{
+                            
+                        }
+                        @include respond-to(tablet-screen) {
+                            width: 30%;
+                        }
+                        @include respond-to (laptop-screen, desktop-screen) {
+                            width: 25%;
+                        }
+                    }
+                }
+                
+            }
+        }                    /* fin seccion contacto */
+
+        div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            span{
+                font-size: 1rem;
+                color: $font-color;
+                letter-spacing: 0;
+                line-height: 1rem;
+            }
+        }
+        .networks{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            padding: 1.5rem 0 1rem 0;
+            @include respond-to(tablet-screen, laptop-screen, desktop-screen) {
+                padding: 2rem 14rem 2rem 14rem;
+            }
+            @include respond-to(desktop-screen) {
+                padding: 2rem 22rem 2rem 22rem;
+            }
+            i{
+                color: $font-color;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }  
+    }
+}
